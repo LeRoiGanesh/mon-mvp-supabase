@@ -201,6 +201,16 @@ export default function DashboardAdmin() {
               <span className="text-lg">📊</span>
               <span>Historique des tâches</span>
             </button>
+            <button
+              onClick={fetchPresences}
+              disabled={loading}
+              className="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-3 rounded-xl hover:from-green-700 hover:to-green-800 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+            >
+              <span className={`text-lg ${loading ? 'animate-spin' : ''}`}>
+                {loading ? '⏳' : '🔄'}
+              </span>
+              <span>Actualiser</span>
+            </button>
           </div>
         </div>
       </div>
